@@ -9,7 +9,7 @@ do
         continue
     fi
     echo ">> $line"
-    ../../build/bin/exec_sql "$line"
+    "${EXEC_SQL_BIN:-../build/bin/exec_sql}" "$line"
     echo "------------------------------"
 done | tee -a output.txt
 echo "check different"
